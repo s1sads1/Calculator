@@ -6,5 +6,8 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#A1ACB5</color>
+    <color name="original_btn">#99D9DDEA</color>
+    <color name="lite_grey">#999EA5A6</color>
+    <color name="dark_grey">#995B5E67</color>
 </resources>
