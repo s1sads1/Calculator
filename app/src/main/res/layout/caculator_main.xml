@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/caculator_vertical_guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/caculator_horizontal_guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/caculator_constraint1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/caculator_horizontal_guideline1">
+
+        <Button
+            android:id="@+id/caculator_Btn0"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:onClick="buttonClicked"
+            android:text="0"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/caculator_constraint1"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn00"
+            app:layout_constraintStart_toStartOf="@+id/caculator_constraint1"
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn1" />
+
+        <Button
+            android:id="@+id/caculator_Btn00"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="00"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toBottomOf="@+id/caculator_constraint1"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn."
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn0"
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn1" />
+
+        <Button
+            android:id="@+id/caculator_Btn."
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="."
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/caculator_constraint1"
+            app:layout_constraintEnd_toStartOf="@id/caculator_BtnPlus"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn00"
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn1" />
+
+        <Button
+            android:id="@+id/caculator_BtnPlus"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="+"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/caculator_constraint1"
+            app:layout_constraintEnd_toEndOf="@id/caculator_constraint1"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn."
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn1" />
+
+
+        <Button
+            android:id="@+id/caculator_Btn1"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="1"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn0"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn00"
+            app:layout_constraintStart_toStartOf="@+id/caculator_constraint1"
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn4" />
+
+        <Button
+            android:id="@+id/caculator_Btn2"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="2"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn00"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn."
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn0"
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn4" />
+
+        <Button
+            android:id="@+id/caculator_Btn3"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="3"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn."
+            app:layout_constraintEnd_toStartOf="@id/caculator_BtnPlus"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn00"
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn4" />
+
+        <Button
+            android:id="@+id/caculator_BtnPlus2"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="+"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_BtnPlus"
+            app:layout_constraintEnd_toEndOf="@id/caculator_constraint1"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn."
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn4" />
+
+
+        <Button
+            android:id="@+id/caculator_Btn4"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="4"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn1"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn00"
+            app:layout_constraintStart_toStartOf="@+id/caculator_constraint1"
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn7" />
+
+        <Button
+            android:id="@+id/caculator_Btn5"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="5"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn2"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn."
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn0"
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn7" />
+
+        <Button
+            android:id="@+id/caculator_Btn6"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="6"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn3"
+            app:layout_constraintEnd_toStartOf="@id/caculator_BtnPlus"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn00"
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn7" />
+
+        <Button
+            android:id="@+id/caculator_BtnX"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="×"
+            android:textSize="30dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_BtnPlus2"
+            app:layout_constraintEnd_toEndOf="@id/caculator_constraint1"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn."
+            app:layout_constraintTop_toBottomOf="@id/caculator_Btn7" />
+
+
+        <Button
+            android:id="@+id/caculator_Btn7"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="7"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn4"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn00"
+            app:layout_constraintStart_toStartOf="@+id/caculator_constraint1"
+            app:layout_constraintTop_toBottomOf="@id/caculator_BtnCE" />
+
+        <Button
+            android:id="@+id/caculator_Btn8"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="8"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn5"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn."
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn0"
+            app:layout_constraintTop_toBottomOf="@id/caculator_BtnCE" />
+
+        <Button
+            android:id="@+id/caculator_Btn9"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button"
+            android:text="9"
+            android:textSize="25dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn6"
+            app:layout_constraintEnd_toStartOf="@id/caculator_BtnPlus"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn00"
+            app:layout_constraintTop_toBottomOf="@id/caculator_BtnCE" />
+
+        <Button
+            android:id="@+id/caculator_BtnPercent"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="%"
+            android:textSize="30dp"
+            android:onClick="buttonClicked"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_BtnX"
+            app:layout_constraintEnd_toEndOf="@id/caculator_constraint1"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn."
+            app:layout_constraintTop_toBottomOf="@id/caculator_BtnCE" />
+
+        <Button
+            android:id="@+id/caculator_BtnCE"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_blue"
+            android:text="CE"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn7"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn00"
+            app:layout_constraintStart_toStartOf="@+id/caculator_constraint1"
+            app:layout_constraintTop_toBottomOf="@id/caculator_BtnAc" />
+
+        <Button
+            android:id="@+id/caculator_BtnMC"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="MC"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn8"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn."
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn0"
+            app:layout_constraintTop_toBottomOf="@id/caculator_BtnPlMa" />
+
+        <Button
+            android:id="@+id/caculator_BtnMR"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="MR"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_Btn9"
+            app:layout_constraintEnd_toStartOf="@id/caculator_BtnPlus"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn00"
+            app:layout_constraintTop_toBottomOf="@id/caculator_BtnPre" />
+
+        <Button
+            android:id="@+id/caculator_BtnMma"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="M-"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_BtnPercent"
+            app:layout_constraintEnd_toEndOf="@id/caculator_constraint1"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn."
+            app:layout_constraintTop_toBottomOf="@id/caculator_BtnPre" />
+
+
+        <Button
+            android:id="@+id/caculator_BtnAc"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_blue"
+            android:text="AC"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_BtnCE"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn00"
+            app:layout_constraintStart_toStartOf="@+id/caculator_constraint1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/caculator_BtnPlMa"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="+/-"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_BtnMC"
+            app:layout_constraintEnd_toStartOf="@id/caculator_Btn."
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn0"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/caculator_BtnPre"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="▶"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_BtnMR"
+            app:layout_constraintEnd_toStartOf="@id/caculator_BtnPlus"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn00"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/caculator_BtnRoot"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:background="@drawable/num_button_dark"
+            android:text="√"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/caculator_BtnMma"
+            app:layout_constraintEnd_toEndOf="@id/caculator_constraint1"
+            app:layout_constraintStart_toEndOf="@+id/caculator_Btn."
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/caculator_horizontal_guideline1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/caculator_expressText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/caculator_resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
